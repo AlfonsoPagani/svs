@@ -1,2 +1,2 @@
-# SVS
-Strutture per veicoli spaziali
+# Strutture per veicoli spaziali
+Materiale del corso
