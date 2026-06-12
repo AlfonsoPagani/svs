@@ -4,6 +4,17 @@ MATLAB scripts for the vibration analysis of spacecraft.
 
 Lumped mass models.
 
+## [vibroacoustics.m](vibroacoustics.m)
+
+Sect. 2.9, [Lecture notes](book/svsbook.pdf).
+
+Single-dof plate model with a dummy mass subjected to acoustic loadings. Given the launcher SPL, it computes:
+- pressure spectral density;
+- transfer function;
+- PSD of the dummy mass acceleration;
+- PSD of the displacement;
+- rms values.
+
 ## [launcher.m](launcher.m)
 
 Chap. 3, [Lecture notes](book/svsbook.pdf).
