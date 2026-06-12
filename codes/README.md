@@ -6,7 +6,7 @@ Lumped mass models.
 
 ## [vibroacoustics.m](vibroacoustics.m)
 
-Sect. 2.9, [Lecture notes](book).
+Sect. 2.9, [Lecture notes](../book/).
 
 Single-dof plate model with a dummy mass subjected to acoustic loadings. Given the launcher SPL, it computes:
 - pressure spectral density;
