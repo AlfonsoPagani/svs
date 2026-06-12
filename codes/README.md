@@ -17,7 +17,7 @@ Single-dof plate model with a dummy mass subjected to acoustic loadings. Given t
 
 ## [launcher.m](launcher.m)
 
-Chap. 3, [Lecture notes](book/svsbook.pdf).
+Chap. 3, [Lecture notes](../book/).
 
 For a 4-dof payload-launcher system, computes:
 - mode shapes and natural frequencies;
@@ -27,7 +27,7 @@ For a 4-dof payload-launcher system, computes:
 
 ## [guyan.m](guyan.m)
 
-Sect. 4.1, [Lecture notes](book/svsbook.pdf).
+Sect. 4.1, [Lecture notes](../book/).
 
 For a 10-dof payload-launcher system, computes:
 - mode shapes and natural frequencies;
