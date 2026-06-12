@@ -1,6 +1,6 @@
-# Strutture per veicoli spaziali
+# Strutture per Veicoli Spaziali
 
-Materiale del corso
+Materiale del corso di Strutture per Veicoli Spaziali per gli studenti aerospaziali del Politecnico di Torino.
 
 ## Appunti e dispense
 
