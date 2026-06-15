@@ -35,3 +35,11 @@ For a 10-dof payload-launcher system, computes:
 - statically condensation (Guyan reduction);
 - reduced mass and stiffness;
 - MAC and COC.
+
+## [effmasses.m](effmasses.m), credits to @PieroChiaia
+
+For the same 10-dof model of the previous example, computes:
+- mode shape animations;
+- generalized mass and stiffness matrices;
+- participation factors;
+- modal effective masses.
