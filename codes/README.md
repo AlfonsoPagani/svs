@@ -36,7 +36,7 @@ For a 10-dof payload-launcher system, computes:
 - reduced mass and stiffness;
 - MAC and COC.
 
-## [effmasses.m](effmasses.m), credits to @PieroChiaia
+## [effmasses.m](effmasses.m), credits to [@PieroChiaia](https://github.com/PieroChiaia)
 
 For the same 10-dof model of the previous example, computes:
 - mode shape animations;
