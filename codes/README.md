@@ -36,7 +36,7 @@ For a 10-dof payload-launcher system, computes:
 - reduced mass and stiffness;
 - MAC and COC.
 
-## [effmasses.m](effmasses.m)
+## [effmasses.m](effmasses.m)*
 
 See the [Slides](../slides/), credits to [@PieroChiaia](https://github.com/PieroChiaia)
 
@@ -45,3 +45,5 @@ For the same 10-dof model of the previous example, computes:
 - generalized mass and stiffness matrices;
 - participation factors;
 - modal effective masses.
+
+*Function [animate.m](animate.m) is needed to run the script.
