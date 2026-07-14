@@ -47,3 +47,23 @@ For the same 10-dof model of the previous example, computes:
 - modal effective masses.
 
 *Function [animate.m](animate.m) is needed to run the script.
+
+## [buckling.m](buckling.m)
+
+For a column in compression, computes:
+- the first three critical buckling loads;
+- the first three buckling mode shapes.
+
+## [postbuckling.m](postbuckling.m)
+
+For the same problem of above, computes:
+- the equilibrium curve in the post-buckling state;
+- comparison with the linearized solution.
+
+## [elastica.nb](elastica.nb)
+
+Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
+
+## [pendulum.nb](pendulum.nb)
+
+Non linear pendulum; analogy with the elastica solution.
