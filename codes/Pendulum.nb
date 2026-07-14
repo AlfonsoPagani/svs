@@ -1,0 +1,359 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11956,        350]
+NotebookOptionsPosition[     10726,        307]
+NotebookOutlinePosition[     11267,        328]
+CellTagsIndexPosition[     11224,        325]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Nonlinear pendulum", "Title",
+ CellChangeTimes->{{3.718874485838086*^9, 3.7188744891040115`*^9}}],
+
+Cell["\<\
+Effect of the nonlinearities on the oscillation period\
+\>", "Subtitle",
+ CellChangeTimes->{{3.718874521999036*^9, 3.718874534179711*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", "10"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7187937823677044`*^9, 3.7187937841579714`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"L", "=", "1"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7187937899080625`*^9, 3.7187937915262065`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"T0", "=", 
+  RowBox[{"N", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"g", "/", "L"}], "]"}], "/", "2"}], "/", "Pi"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7187931867912207`*^9, 3.718793252328601*^9}, {
+  3.718793779017353*^9, 3.7187937957331734`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"T", "=", 
+  RowBox[{"2", "*", 
+   RowBox[{"T0", "/", "Pi"}], "*", 
+   RowBox[{"EllipticK", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"theta0", "/", "2"}], "]"}], ")"}], "^", "2"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7187933259326897`*^9, 3.718793341770897*^9}, {
+  3.718793408579178*^9, 3.718793420333496*^9}, {3.7187936455959115`*^9, 
+  3.718793645984191*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"T", "/", "T0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"theta0", ",", "0", ",", "Pi"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<\!\(\*SubscriptBox[\(\[Theta]\), \(0\)]\) (rad)\>\"", ",", 
+      "\"\<T/T0\>\""}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.718793479515396*^9, 3.7187935963710756`*^9}, {
+  3.718793658769255*^9, 3.7187936626249633`*^9}, {3.718793713361869*^9, 
+  3.7187937345508647`*^9}, {3.718944855436491*^9, 3.7189448829248123`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Equations of motion: linear vs nonlinear\
+\>", "Subtitle",
+ CellChangeTimes->{{3.7188746285757866`*^9, 3.7188746370161448`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"theta0", "=", 
+   RowBox[{
+    RowBox[{"179", "/", "180"}], "*", "Pi"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.718794715614258*^9, 3.718794720975052*^9}, 
+   3.7188740489794474`*^9, {3.7188741747478423`*^9, 3.718874200849643*^9}, {
+   3.718874246704841*^9, 3.718874270118614*^9}, {3.7188743094602976`*^9, 
+   3.7188743249296207`*^9}, {3.718874356820836*^9, 3.71887435708652*^9}, {
+   3.718874424402955*^9, 3.718874459388667*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dtheta0", "=", "0"}], ";"}]], "Input",
+ CellChangeTimes->{{3.718873930912011*^9, 3.7188739828083186`*^9}, {
+  3.7188740237254333`*^9, 3.7188740522270346`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"linsol", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaL", "''"}], "[", "t", "]"}], "==", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"g", "/", "L"}], ")"}]}], " ", "*", 
+         RowBox[{"thetaL", "[", "t", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"thetaL", "[", "0", "]"}], "==", "theta0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaL", "'"}], "[", "0", "]"}], "\[Equal]", "dtheta0"}]}], 
+      "}"}], ",", "thetaL", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7187946565674596`*^9, 3.718794712847299*^9}, {
+   3.7187947618909874`*^9, 3.71879484409717*^9}, {3.7187950060747843`*^9, 
+   3.7187950339475107`*^9}, {3.7188735312910676`*^9, 3.718873564484297*^9}, {
+   3.718873608466448*^9, 3.7188736255626583`*^9}, 3.718873657926972*^9, 
+   3.718873922745598*^9, 3.718873968259101*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nonlinsol", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaNL", "''"}], "[", "t", "]"}], "==", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"g", "/", "L"}], ")"}]}], " ", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"thetaNL", "[", "t", "]"}], "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"thetaNL", "[", "0", "]"}], "==", "theta0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaNL", "'"}], "[", "0", "]"}], "\[Equal]", "dtheta0"}]}],
+       "}"}], ",", "thetaNL", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.718793849260044*^9, 3.7187938933012123`*^9}, {
+   3.7187939385172095`*^9, 3.7187939386102753`*^9}, {3.7187939815286484`*^9, 
+   3.718794012067261*^9}, {3.7187940843994503`*^9, 3.718794085503231*^9}, {
+   3.7187941418390985`*^9, 3.71879418697106*^9}, {3.718794218829584*^9, 
+   3.718794234905975*^9}, 3.7187943036626205`*^9, {3.7187943537011347`*^9, 
+   3.7187943676189737`*^9}, {3.7187944140598307`*^9, 
+   3.7187944258791857`*^9}, {3.7187944960578556`*^9, 
+   3.7187944990689945`*^9}, {3.718794559798961*^9, 3.718794613220795*^9}, {
+   3.7187949622867966`*^9, 3.718794964480359*^9}, {3.7187951963146863`*^9, 
+   3.718795225012991*^9}, {3.7188736299225807`*^9, 3.718873660271*^9}, 
+   3.718873925855514*^9, {3.718873971447194*^9, 3.718873999695058*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"thetaL", "[", "t", "]"}], "/.", "linsol"}], ",", 
+     RowBox[{
+      RowBox[{"thetaNL", "[", "t", "]"}], "/.", "nonlinsol"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<linear\>\"", ",", "\"\<nonlinear\>\""}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<\[Theta]\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7187940246501656`*^9, 3.7187940283988175`*^9}, {
+  3.7187941002756996`*^9, 3.718794101968894*^9}, {3.7187941606263943`*^9, 
+  3.7187941644771194`*^9}, {3.718794389551504*^9, 3.718794434475279*^9}, {
+  3.7187944884694805`*^9, 3.718794509269225*^9}, {3.718794615635505*^9, 
+  3.7187946157936068`*^9}, {3.7187947293089514`*^9, 3.7187947476719165`*^9}, {
+  3.7187948610781865`*^9, 3.718794869227954*^9}, {3.7187951350262947`*^9, 
+  3.7187951484548154`*^9}, {3.7188735871912518`*^9, 3.718873590426233*^9}, {
+  3.718873667835002*^9, 3.7188736822745347`*^9}, {3.718873785953407*^9, 
+  3.718873790438439*^9}, {3.718873828806098*^9, 3.7188738722394876`*^9}, {
+  3.718874070504556*^9, 3.718874075383498*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Effect of damping", "Subtitle",
+ CellChangeTimes->{{3.718945073756836*^9, 3.7189450829143085`*^9}, 
+   3.7189454168445015`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"c", "=", "0.4"}], ";"}]], "Input",
+ CellChangeTimes->{{3.71894515534842*^9, 3.7189451701946726`*^9}, {
+  3.7189452340545654`*^9, 3.7189452861162243`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"m", "=", "1"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7189451608337317`*^9, 3.718945163787305*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"linsolwd", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaLd", "''"}], "[", "t", "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "c"}], "/", "m"}], "*", 
+          RowBox[{
+           RowBox[{"thetaLd", "'"}], "[", "t", "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"g", "/", "L"}], ")"}], " ", "*", 
+          RowBox[{"thetaLd", "[", "t", "]"}]}]}]}], ",", 
+       RowBox[{
+        RowBox[{"thetaLd", "[", "0", "]"}], "==", "theta0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaLd", "'"}], "[", "0", "]"}], "\[Equal]", "dtheta0"}]}],
+       "}"}], ",", "thetaLd", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.71895571651695*^9, 3.7189557285704546`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nonlinsolwd", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaNLd", "''"}], "[", "t", "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "c"}], "/", "m"}], "*", 
+          RowBox[{
+           RowBox[{"thetaNLd", "'"}], "[", "t", "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"g", "/", "L"}], ")"}], " ", "*", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"thetaNLd", "[", "t", "]"}], "]"}]}]}]}], ",", 
+       RowBox[{
+        RowBox[{"thetaNLd", "[", "0", "]"}], "==", "theta0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"thetaNLd", "'"}], "[", "0", "]"}], "\[Equal]", 
+        "dtheta0"}]}], "}"}], ",", "thetaNLd", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7189451165447397`*^9, 3.718945132375492*^9}, {
+   3.7189451794933286`*^9, 3.7189451920891924`*^9}, 3.7189452221405597`*^9, 
+   3.7189452562362175`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"thetaLd", "[", "t", "]"}], "/.", "linsolwd"}], ",", 
+     RowBox[{
+      RowBox[{"thetaNLd", "[", "t", "]"}], "/.", "nonlinsolwd"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<\[Theta]\>\""}], "}"}]}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<linear\>\"", ",", "\"\<nonlinear\>\""}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "theta0"}], ",", "theta0"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.71894520323147*^9, 3.7189452247189417`*^9}, {
+  3.718945306494779*^9, 3.718945360816373*^9}, {3.7189557408581657`*^9, 
+  3.718955760149805*^9}, {3.718955805509906*^9, 3.7189558088472853`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1003},
+WindowMargins->{{1911, Automatic}, {-9, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.32, 841.92}},
+Magnification->1.4000000953674316`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 103, 1, 125, "Title"],
+Cell[685, 25, 148, 3, 69, "Subtitle"],
+Cell[836, 30, 138, 3, 42, "Input"],
+Cell[977, 35, 137, 3, 42, "Input"],
+Cell[1117, 40, 312, 9, 42, "Input"],
+Cell[1432, 51, 436, 12, 42, "Input"],
+Cell[1871, 65, 565, 13, 42, "Input"],
+Cell[CellGroupData[{
+Cell[2461, 82, 138, 3, 69, "Subtitle"],
+Cell[2602, 87, 467, 9, 42, "Input"],
+Cell[3072, 98, 194, 4, 42, "Input"],
+Cell[3269, 104, 1058, 27, 42, "Input"],
+Cell[4330, 133, 1537, 34, 42, "Input"],
+Cell[5870, 169, 1307, 27, 42, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7214, 201, 133, 2, 69, "Subtitle"],
+Cell[7350, 205, 189, 4, 42, "Input"],
+Cell[7542, 211, 135, 3, 42, "Input"],
+Cell[7680, 216, 958, 28, 42, "Input"],
+Cell[8641, 246, 1115, 31, 42, "Input"],
+Cell[9759, 279, 939, 24, 70, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
