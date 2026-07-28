@@ -64,6 +64,13 @@ For the same problem of above, computes:
 
 Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
 
+## [solararray.m](solararray.m)
+
+Kinematic analysis of a multi-body system representing a deployable solar array.
+It provides:
+- animation states of the deployed structure
+- actuation mechanics
+
 ## [pendulum.nb](pendulum.nb)
 
 Non linear pendulum; analogy with the elastica solution.
