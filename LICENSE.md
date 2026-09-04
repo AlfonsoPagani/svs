@@ -1,4 +1,19 @@
-Copyright (c) 2026 Alfonso Pagani
+## [IT] Copyright (c) 2026 Alfonso Pagani
+
+Questo repository contiene materiale didattico, appunti delle lezioni e software sviluppati per finalità di insegnamento e ricerca.
+
+È concessa a studenti, docenti e ricercatori l’autorizzazione ad accedere, utilizzare, copiare e modificare i contenuti di questo repository esclusivamente per finalità didattiche e di ricerca senza scopo di lucro.
+
+Qualsiasi utilizzo, riproduzione, distribuzione o opera derivata deve riconoscere la paternità dell’autore originale, Alfonso Pagani, e mantenere la presente informativa sul copyright.
+
+È vietato l’uso commerciale di qualsiasi parte di questo repository, inclusi gli appunti delle lezioni, il software, le figure, gli esempi e le opere derivate, senza previa autorizzazione scritta dell’autore.
+
+Gli appunti delle lezioni e i materiali manoscritti contenuti in questo repository potranno essere incorporati in future pubblicazioni. Non viene concesso alcun diritto di riprodurre, ripubblicare o distribuire commercialmente tali materiali.
+
+I MATERIALI SONO FORNITI “COSÌ COME SONO”, SENZA ALCUNA GARANZIA, ESPRESSA O IMPLICITA.
+
+
+## [EN] Copyright (c) 2026 Alfonso Pagani
 
 This repository contains educational materials, lecture notes, and software developed for teaching and academic research purposes.
 
