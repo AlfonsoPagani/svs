@@ -66,6 +66,10 @@ For the same problem of above, computes:
 
 Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
 
+## [pendulum.nb](pendulum.nb)
+
+Non linear pendulum; analogy with the elastica solution.
+
 ## [solararray.m](solararray.m)
 
 Chap. 12, [slides/svs_12_esempi_nonlineari.pdf](../slides/svs_12_esempi_nonlineari.pdf).
@@ -75,6 +79,13 @@ It provides:
 - animation states of the deployed structure
 - actuation mechanics
 
-## [pendulum.nb](pendulum.nb)
+##[tapedeploy.nb](tapedeploy.nb)
 
-Non linear pendulum; analogy with the elastica solution.
+Chap. 12, [slides/svs_12_esempi_nonlineari.pdf](../slides/svs_12_esempi_nonlineari.pdf).
+
+Single dof deployment analysis of a tape spring. Wolfram Mathematica notebook.
+It provides:
+- full formulation of the unconstrained expanding circle model
+- dissipation and gravity effects
+- deployment speed and dynamics
+- comparison with experiment
