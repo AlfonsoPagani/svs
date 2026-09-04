@@ -6,7 +6,7 @@ Lumped mass models.
 
 ## [vibroacoustics.m](vibroacoustics.m)
 
-Cap. 2, [Slides](../slides/svs_02_dinamica_1gdl.pdf).
+Chap. 2, [slides/svs_02_dinamica_1gdl.pdf](../slides/svs_02_dinamica_1gdl.pdf).
 
 Single-dof plate model with a dummy mass subjected to acoustic loadings. Given the launcher SPL, it computes:
 - pressure spectral density;
@@ -17,7 +17,7 @@ Single-dof plate model with a dummy mass subjected to acoustic loadings. Given t
 
 ## [launcher.m](launcher.m)
 
-Chap. 3, [Lecture notes](../book/).
+Chap. 3, [slides/svs_03_dinamica_mgdl.pdf](../slides/svs_03_dinamica_mgdl.pdf).
 
 For a 4-dof payload-launcher system, computes:
 - mode shapes and natural frequencies;
@@ -27,7 +27,7 @@ For a 4-dof payload-launcher system, computes:
 
 ## [guyan.m](guyan.m)
 
-Sect. 4.1, [Lecture notes](../book/).
+Chap. 4, [slides/svs_04_dinamica_substructuring.pdf](../slides/svs_04_dinamica_substructuring.pdf).
 
 For a 10-dof payload-launcher system, computes:
 - mode shapes and natural frequencies;
@@ -38,7 +38,7 @@ For a 10-dof payload-launcher system, computes:
 
 ## [effmasses.m](effmasses.m)*
 
-See the [Slides](../slides/), credits to [@PieroChiaia](https://github.com/PieroChiaia)
+Additional example Chap. 4, credits to [@PieroChiaia](https://github.com/PieroChiaia)
 
 For the same 10-dof model of the previous example, computes:
 - mode shape animations;
@@ -49,6 +49,8 @@ For the same 10-dof model of the previous example, computes:
 *Function [animate.m](animate.m) is needed to run the script.
 
 ## [buckling.m](buckling.m)
+
+Chap. 10-12, [slides/](../slides/). 
 
 For a column in compression, computes:
 - the first three critical buckling loads;
@@ -65,6 +67,8 @@ For the same problem of above, computes:
 Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
 
 ## [solararray.m](solararray.m)
+
+Chap. 12, [slides/svs_12_esempi_nonlineari.pdf](../slides/svs_12_esempi_nonlineari.pdf).
 
 Kinematic analysis of a multi-body system representing a deployable solar array.
 It provides:
