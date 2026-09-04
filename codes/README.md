@@ -64,7 +64,7 @@ For the same problem of above, computes:
 
 ## [elastica.nb](elastica.nb)
 
-Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
+Wolfram Mathematica notebook. Same exercise as in [postbuckling.m](postbuckling.m).
 
 ## [pendulum.nb](pendulum.nb)
 
