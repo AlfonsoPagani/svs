@@ -6,7 +6,7 @@ Materiale del corso di ''Strutture per Veicoli Spaziali'' per gli studenti aeros
 
 Materiale teorico, slide e note integrative.
 
-📂 Cartella: [book/](book/)
+📂 Cartella: [slides/](slides/)
 
 ## Codici
 
