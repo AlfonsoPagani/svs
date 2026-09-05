@@ -79,7 +79,7 @@ It provides:
 - animation states of the deployed structure
 - actuation mechanics
 
-##[tapedeploy.nb](tapedeploy.nb)
+## [tapedeploy.nb](tapedeploy.nb)
 
 Chap. 12, [slides/svs_12_esempi_nonlineari.pdf](../slides/svs_12_esempi_nonlineari.pdf).
 
