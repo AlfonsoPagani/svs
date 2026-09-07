@@ -10,7 +10,7 @@ Materiale teorico, slide e note integrative.
 
 ## Codici
 
-Script ed esempi MATLAB utilizzati durante il corso.
+Script ed esempi utilizzati durante il corso.
 
 📂 Cartella: [codes/](codes/)
 
